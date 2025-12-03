@@ -1,0 +1,201 @@
+{
+  "edition": "TI4",
+  "version": 1,
+
+  "units": {
+    "fighter": {
+      "displayName": "Fighter",
+      "shipType": "Fighter",
+      "cost": { "resources": 1, "unitsProduced": 2 },
+      "spaceCombat": { "dice": 1, "hitOn": 9 },
+      "move": 0,
+      "capacity": 0,
+      "abilities": []
+    },
+
+    "destroyer": {
+      "displayName": "Destroyer",
+      "shipType": "Destroyer",
+      "cost": { "resources": 1, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 1, "hitOn": 9 },
+      "move": 2,
+      "capacity": 0,
+      "abilities": [
+        {
+          "key": "ANTI_FIGHTER_BARRAGE",
+          "dice": 2,
+          "hitOn": 9
+        }
+      ]
+    },
+
+    "cruiser": {
+      "displayName": "Cruiser",
+      "shipType": "Cruiser",
+      "cost": { "resources": 2, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 1, "hitOn": 7 },
+      "move": 2,
+      "capacity": 1,
+      "abilities": []
+    },
+
+    "carrier": {
+      "displayName": "Carrier",
+      "shipType": "Carrier",
+      "cost": { "resources": 3, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 1, "hitOn": 9 },
+      "move": 1,
+      "capacity": 4,
+      "abilities": []
+    },
+
+    "dreadnought": {
+      "displayName": "Dreadnought",
+      "shipType": "Dreadnought",
+      "cost": { "resources": 4, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 1, "hitOn": 5 },
+      "move": 1,
+      "capacity": 1,
+      "abilities": [
+        { "key": "SUSTAIN_DAMAGE" },
+        { "key": "BOMBARDMENT", "dice": 1, "hitOn": 5 }
+      ]
+    },
+
+    "war_sun": {
+      "displayName": "War Sun",
+      "shipType": "WarSun",
+      "cost": { "resources": 12, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 3, "hitOn": 3 },
+      "move": 2,
+      "capacity": 6,
+      "abilities": [
+        { "key": "SUSTAIN_DAMAGE" },
+        { "key": "PLANETARY_SHIELD_OVERRIDE" },
+        { "key": "BOMBARDMENT", "dice": 3, "hitOn": 3 }
+      ]
+    },
+
+    "flagship_generic": {
+      "displayName": "Flagship",
+      "shipType": "Flagship",
+      "cost": { "resources": 8, "unitsProduced": 1 },
+      "spaceCombat": { "dice": 2, "hitOn": 7 },
+      "move": 1,
+      "capacity": 3,
+      "abilities": [
+        { "key": "SUSTAIN_DAMAGE" }
+      ]
+    }
+  },
+
+  "unitUpgrades": {
+    "fighter_2": {
+      "baseId": "fighter",
+      "displayName": "Fighter II",
+      "spaceCombat": { "dice": 1, "hitOn": 8 },
+      "move": 0,
+      "capacity": 0,
+      "abilities": []
+    },
+
+    "destroyer_2": {
+      "baseId": "destroyer",
+      "displayName": "Destroyer II",
+      "spaceCombat": { "dice": 1, "hitOn": 8 },
+      "move": 2,
+      "capacity": 0,
+      "abilities": [
+        {
+          "key": "ANTI_FIGHTER_BARRAGE",
+          "dice": 3,
+          "hitOn": 6
+        }
+      ]
+    },
+
+    "cruiser_2": {
+      "baseId": "cruiser",
+      "displayName": "Cruiser II",
+      "spaceCombat": { "dice": 1, "hitOn": 6 },
+      "move": 3,
+      "capacity": 1,
+      "abilities": []
+    },
+
+    "carrier_2": {
+      "baseId": "carrier",
+      "displayName": "Carrier II",
+      "spaceCombat": { "dice": 1, "hitOn": 9 },
+      "move": 2,
+      "capacity": 6,
+      "abilities": []
+    },
+
+    "dreadnought_2": {
+      "baseId": "dreadnought",
+      "displayName": "Dreadnought II",
+      "spaceCombat": { "dice": 1, "hitOn": 5 },
+      "move": 2,
+      "capacity": 1,
+      "abilities": [
+        { "key": "SUSTAIN_DAMAGE" },
+        { "key": "BOMBARDMENT", "dice": 1, "hitOn": 5 },
+        { "key": "DIRECT_HIT_IMMUNE" }
+      ]
+    }
+  },
+
+  "factions": {
+    "federation_of_sol": {
+      "displayName": "Federation of Sol",
+      "unitOverrides": {
+        "carrier": {
+          "capacity": 6
+        }
+      },
+      "flagship": {
+        "id": "genesis",
+        "displayName": "Genesis",
+        "shipType": "Flagship",
+        "spaceCombat": { "dice": 2, "hitOn": 5 },
+        "move": 1,
+        "capacity": 12,
+        "abilities": [
+          { "key": "SUSTAIN_DAMAGE" }
+        ]
+      }
+    },
+
+    "embers_of_muaat": {
+      "displayName": "The Embers of Muaat",
+      "unitOverrides": {
+        "war_sun": {
+          "displayName": "Prototype War Sun I",
+          "move": 1
+        }
+      },
+      "flagship": {
+        "id": "the_inferno",
+        "displayName": "The Inferno",
+        "shipType": "Flagship",
+        "spaceCombat": { "dice": 2, "hitOn": 5 },
+        "move": 1,
+        "capacity": 3,
+        "abilities": [
+          { "key": "SUSTAIN_DAMAGE" }
+        ]
+      }
+    },
+
+    "sardakk_norr": {
+      "displayName": "Sardakk N'orr",
+      "combatModifier": 1
+    },
+
+    "universities_of_jol_nar": {
+      "displayName": "The Universities of Jol-Nar",
+      "combatModifier": -1
+    }
+  }
+}

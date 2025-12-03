@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Smaller scan button size in landscape, so it fits nicely -->
+    <dimen name="scan_button_size">100dp</dimen>
+
+</resources>

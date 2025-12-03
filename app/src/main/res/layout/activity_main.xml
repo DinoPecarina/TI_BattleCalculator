@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ti_main_background"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#80000000"
+            app:title="@string/twilight_imperium_battle_calculator"
+            app:titleTextColor="@android:color/white"
+            app:titleCentered="true"
+            app:menu="@menu/main_menu" />
+
+            <LinearLayout
+                android:id="@+id/overlayContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <LinearLayout
+                    android:id="@+id/scanPanel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_scan_panel"
+                    android:padding="24dp"
+                    android:elevation="8dp"
+                    android:layout_margin="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/scanBattleButton"
+                        android:layout_width="@dimen/scan_button_size"
+                        android:layout_height="@dimen/scan_button_size"
+                        android:background="@drawable/bg_round_button"
+                        android:elevation="8dp"
+                        android:padding="24dp"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:icon="@drawable/ic_camera_white"
+                        app:iconTint="@android:color/white"
+                        app:iconSize="64dp"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp" />
+
+
+                    <TextView
+                        android:id="@+id/scanSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scan_battle_subtitle"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/appFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/version_1"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:paddingBottom="12dp"
+                android:paddingTop="8dp"
+                android:alpha="0.85" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsDrawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#CC222222"
+>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resource_usage"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerResourceUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/bg_spinner_white"
+            android:popupBackground="@android:color/white" />
+
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

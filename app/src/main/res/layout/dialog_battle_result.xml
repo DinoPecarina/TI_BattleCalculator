@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/resultRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/simulationsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simulations: 0"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/drawText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Draw: 0.00%" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#22000000" />
+
+        <LinearLayout
+            android:id="@+id/p1Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/p1NameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/p1FactionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faction" />
+
+            <TextView
+                android:id="@+id/p1WinText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Win: 0.00%" />
+
+            <TextView
+                android:id="@+id/p1ResourceLossText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avg resource loss: 0.0"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/p1LossesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Losses..." />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#22000000" />
+
+        <LinearLayout
+            android:id="@+id/p2Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/p2NameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/p2FactionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faction" />
+
+            <TextView
+                android:id="@+id/p2WinText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Win: 0.00%" />
+
+            <TextView
+                android:id="@+id/p2ResourceLossText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avg resource loss: 0.0"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/p2LossesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Losses..." />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

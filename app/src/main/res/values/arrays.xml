@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="resource_usage_options">
+        <item>Low</item>
+        <item>Mid</item>
+        <item>High</item>
+    </string-array>
+
+</resources>

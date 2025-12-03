@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default (portrait) scan button size -->
+    <dimen name="scan_button_size">130dp</dimen>
+
+</resources>
